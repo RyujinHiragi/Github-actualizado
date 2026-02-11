@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Presentación — Solo Fruta · Gosén</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="Presentación solo fruta deshidratada - Gosén">
+  <script src="/js/payments-config.js" defer></script>
+  <script src="/js/payments.js" defer></script>
+  <script src="/js/app.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="/">Gosén</a></div></header>
+  <main>
+    <div id="productPage" data-product-id="solo-fruta">
+      <div class="container product-fallback">
+        <a href="/index.html">← Volver</a>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;margin-top:1rem">
+          <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ef01" alt="Presentación — Solo Fruta" style="width:360px;border-radius:8px;object-fit:cover">
+          <div>
+            <h1>Presentación — Solo Fruta</h1>
+            <p style="color:var(--muted)">Presentación pura: solo la fruta deshidratada, sin mezclas ni sabores añadidos.</p>
+            <p><strong>Precio desde:</strong> $8.000</p>
+            <p><a class="btn primary" href="/">Comprar</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  <aside id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button id="closeCart" class="icon-btn">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div class="totals">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button id="checkoutBtn" class="btn primary">Pagar</button>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay"></div>
+
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <button id="closePayment" class="icon-btn close">✕</button>
+      <h3>Selecciona método de pago</h3>
+      <div class="payment-options">
+        <button data-method="card" class="btn">Tarjeta (Simular)</button>
+        <button data-method="transfer" class="btn">Transferencia Bancaria</button>
+        <button data-method="wompi" class="btn">Wompi</button>
+        <button data-method="mercadopago" class="btn">MercadoPago</button>
+        <button data-method="payu" class="btn">PayU</button>
+        <button data-method="pse" class="btn">PSE</button>
+      </div>
+      <div id="paymentResult" class="payment-result"></div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="container footer-inner"><div><strong>Gosén</strong></div></div></footer>
+</body>
+</html>

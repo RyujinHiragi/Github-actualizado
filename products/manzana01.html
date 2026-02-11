@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manzana deshidratada · Gosén</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="Manzana deshidratada - Gosén">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="/js/payments-config.js" defer></script>
+  <script src="/js/payments.js" defer></script>
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Gosén</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="/index.html">Inicio</a>
+        <a href="/index.html#about">Sobre Nosotros</a>
+        <a href="/index.html#products">Productos</a>
+      </nav>
+      <div class="header-actions">
+        <button id="whatsappBtn" class="icon-btn whatsapp">WhatsApp</button>
+        <button id="cartBtn" class="icon-btn cart">Carrito <span id="cartCount">0</span></button>
+        <button id="menuToggle" class="icon-btn burger">☰</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="productPage" data-product-id="manzana01">
+      <div class="container product-fallback">
+        <a href="/index.html">← Volver</a>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;margin-top:1rem">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a4b5c6d7e8f9a0b1c2d" alt="Manzana deshidratada" style="width:360px;border-radius:8px;object-fit:cover">
+          <div>
+            <h1>Manzana deshidratada</h1>
+            <p style="color:var(--muted)">Ligera y refrescante, sin azúcar añadida.</p>
+            <p><strong>Precio desde:</strong> $10.000</p>
+            <p><a class="btn primary" href="/">Comprar</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <aside id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button id="closeCart" class="icon-btn">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div class="totals">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button id="checkoutBtn" class="btn primary">Pagar</button>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay"></div>
+
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <button id="closePayment" class="icon-btn close">✕</button>
+      <h3>Selecciona método de pago</h3>
+      <div class="payment-options">
+        <button data-method="card" class="btn">Tarjeta (Simular)</button>
+        <button data-method="transfer" class="btn">Transferencia Bancaria</button>
+        <button data-method="wompi" class="btn">Wompi</button>
+        <button data-method="mercadopago" class="btn">MercadoPago</button>
+        <button data-method="payu" class="btn">PayU</button>
+        <button data-method="pse" class="btn">PSE</button>
+      </div>
+      <div id="paymentResult" class="payment-result"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer"><div class="container footer-inner"><div><strong>Gosén</strong><p>Productos deshidratados • Natural • Saludable</p></div><div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a></div></div></footer>
+</body>
+</html>
